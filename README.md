@@ -1,50 +1,13 @@
-# React + TypeScript + Vite
+# Dice Art Generator
+This project was created primarily for personal use inspired by the concept of using dice to recreate artworks. Each die face, displaying a different number of dots, represents varying levels of brightness, forming a pixelated image when arranged together.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The generator allows you to upload an image which is then scaled down to fit a specified dimension. Each pixel's brightness is classified into six levels, corresponding to the six sides of a die. The result is a layout that shows how to place the dice to replicate the image.
 
-Currently, two official plugins are available:
+The tool provides:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- A preview of the generated dice artwork.
+- Information about the dimensions of the artwork based on the size of the dice.
+- An estimated cost calculation based on the price per dice you provide.
+- The option to download a CSV file representing the dice placement schema, which can be used as a guide for arranging the dice.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+You can experiment with the generator here: https://alexandengstrom.github.io/dice-art-generator/
